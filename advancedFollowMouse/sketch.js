@@ -10,7 +10,7 @@ function getRandomColor() {
 let shouldPaint = false;
 
 function setup() {
-  createCanvas(6000, 8400);
+  createCanvas(4000, 4000);
   background('#ffb8b8');
 }
 

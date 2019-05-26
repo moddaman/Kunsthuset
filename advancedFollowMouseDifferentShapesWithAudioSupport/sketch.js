@@ -11,7 +11,7 @@ let shouldPaint = false;
 let mic;
 
 function setup() {
-  createCanvas(8400, 6000);
+  createCanvas(4000, 4000);
   // createCanvas(2500, 2500);
 
   background('#9AECDB');

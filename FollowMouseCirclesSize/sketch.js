@@ -11,7 +11,7 @@ let shouldPaint = false;
 
 function setup() {
   createCanvas(4000, 4000);
-  background('#000');
+  background('#ffb8b8');
 }
 
 function keyPressed() {
@@ -24,22 +24,16 @@ function keyPressed() {
   }
 }
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
 function draw() {
   if (shouldPaint) {
     fill(getRandomColor());
-    quad(
-      mouseX,
-      mouseY,
-      mouseX,
-      mouseY + getRandomInt(120),
-      mouseX + getRandomInt(120),
-      mouseY,
-      mouseX + getRandomInt(120),
-      mouseY + getRandomInt(120)
-    );
+    const x = getRandomInt(100, 600);
+    ellipse(mouseX, mouseY, x, x);
   }
 }
